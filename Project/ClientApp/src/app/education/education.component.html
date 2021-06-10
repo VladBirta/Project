@@ -1,0 +1,24 @@
+<h1 id="tableLabel">Educations</h1>
+
+<p>This component demonstrates fetching educations from the server.</p>
+
+<p *ngIf="!educations"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="educations">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let education of educations">
+      <td>{{ education.ID }}</td>
+      <td>{{ education.EducationTitle }}</td>
+      <td>{{ education.EducationContent }}</td>
+      <td>{{ education.PublicationDate}}</td>
+    </tr>
+  </tbody>
+</table>
