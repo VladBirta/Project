@@ -76,12 +76,16 @@ namespace Project.Controllers
         // POST: api/Educations
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Education>> PostEducation(Education education)
+
+        public async Task PostEducation([FromBody] Education education)
         {
+            if (education.ID == Guid.Empty)
+            {
+                education.ID = Guid.NewGuid();
+            }
+
             _context.Education.Add(education);
             await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetEducation", new { id = education.ID }, education);
         }
 
         // DELETE: api/Educations/5

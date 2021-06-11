@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { EducationsComponent } from './education/education.component';
+import { EducationAddComponent } from './education/educationAdd.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { EducationsComponent } from './education/education.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    EducationsComponent
+    EducationsComponent,
+    EducationAddComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,6 +32,8 @@ import { EducationsComponent } from './education/education.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'educations', component: EducationsComponent },
+      { path: 'educationsAdd', component: EducationAddComponent },
+
     ])
   ],
   providers: [],

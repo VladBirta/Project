@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Education } from './education.models';
 
 @Component({
   selector: 'app-education',
@@ -13,11 +14,6 @@ export class EducationsComponent {
       this.educations = result;
     }, error => console.error(error));
   }
-}
+  }
 
-interface Education {
-  ID: string;
-  EducationTitle: string;
-  EducationContent: string;
-  PublicationDate: string;
-}
+

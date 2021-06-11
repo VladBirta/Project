@@ -4,6 +4,8 @@
 
 <p *ngIf="!educations"><em>Loading...</em></p>
 
+<button class="btn btn-primary" [routerLink]="['/educationsAdd']">Add article</button>
+
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="educations">
   <thead>
     <tr>
